@@ -1,8 +1,10 @@
 {
+  "version": "0.1",
   "brief": "构件样例",
   "type": "shaft_shoulder",
   "name": "shoulder_2",
-  "typeOfFatharAssmble": "rotary_axis",
+  "typeOfFatharassmbly": "rotary_axis",
+  // dimension 中包含对该节点的尺寸描述
   "dimension": {
     "base": "cylinde",
     "diameter": "20mm",
@@ -15,7 +17,7 @@
     "aroundPort": "_around",
     "cylindricalBus": "_bus"
   },
-  "childAssmble": {
+  "childassmbly": {
     "axis": {
       "name": "axis_of_shoulder",
       "type": "rotary_axis",
