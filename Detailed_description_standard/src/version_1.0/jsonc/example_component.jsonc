@@ -1,0 +1,27 @@
+{
+  "version": "0.1",
+  "brief": "构件样例",
+  "type": "shaft_shoulder",
+  "name": "shoulder_2",
+  "typeOfFatharassembly": "rotary_axis",
+  // dimension 中包含对该节点的尺寸描述
+  "dimension": {
+    "base": "cylinde",
+    "diameter": "20mm",
+    "length": "30mm"
+  },
+  // port 其他节点可以以此节点的端口为连接位置
+  "port": {
+    "leftPort": "_left",
+    "rightPort": "_right",
+    "aroundPort": "_around",
+    "cylindricalBus": "_bus"
+  },
+  "childassembly": {
+    "axis": {
+      "name": "axis_of_shoulder",
+      "type": "rotary_axis",
+      "childComent": {}
+    }
+  }
+}

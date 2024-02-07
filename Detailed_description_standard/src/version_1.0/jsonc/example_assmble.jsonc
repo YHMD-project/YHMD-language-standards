@@ -1,0 +1,34 @@
+{
+  "version": "0.1",
+  // brief 中包含对该节点的简单描述
+  "brief": "轴系装配线样例",
+
+  // name 中包含对该节点的名称描述
+  "name": "rotary axis system",
+
+  // type 中包含对该节点的类型描述
+  "type": "rotary_axis",
+
+  "childComponent": [
+    // 第一个子节点及链接方式
+    {
+      "linkWithFa": "_fixed",
+      // 可以直接在节点中展开子节点的详细信息
+      "component": {
+        "name": "shaft_shoulder_1"
+      }
+    },
+    // 第二个子节点及链接方式
+    {
+      "linkWithFa": "_fixed",
+      "linkwithBr": [
+        "_right",
+        "_fixed",
+        // 多个连接方式后的第一个节点，表示当前节点与之前节点的链接方式
+        "shaft_shoulder_1"
+      ],
+      // 可以给出路径，指向子节点文件路径
+      "component": "PATH-TO-FILE/shoulder_2.jsonc"
+    }
+  ]
+}
