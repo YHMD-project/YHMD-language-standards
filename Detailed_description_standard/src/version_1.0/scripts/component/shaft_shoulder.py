@@ -8,7 +8,7 @@ output like before
   "brief": "构件样例",
   "type": "shaft_shoulder",
   "name": "shoulder_2",
-  "typeOfFatharassmbly": "rotary_axis",
+  "typeOfFatharassembly": "rotary_axis",
   "dimension": {
     "base": "cylinde",
     "diameter": "20mm",
@@ -20,7 +20,7 @@ output like before
     "aroundPort": "_around",
     "cylindricalBus": "_bus"
   },
-  "childassmbly": {
+  "childassembly": {
     "axis": {
       "name": "axis_of_shoulder",
       "type": "rotary_axis",

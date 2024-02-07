@@ -1,4 +1,4 @@
-class Assmbly(object):
+class assembly(object):
     """class for discription of the assembly
 
     This class is base class for all the assembly

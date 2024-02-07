@@ -131,7 +131,7 @@ class ShaftShoulder(Component):
         super().__init__(name, brief)
 
 
-class Assmbly(object):
+class assembly(object):
     """class for discription of the assembly
 
     This class is base class for all the assembly
@@ -230,7 +230,7 @@ class Assmbly(object):
         """
 
 
-class RotaryAxis(Assmbly):
+class RotaryAxis(assembly):
     """class for discription of the rotary axis
 
     This class is base class for all the rotary axis

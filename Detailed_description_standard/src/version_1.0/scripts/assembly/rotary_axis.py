@@ -30,10 +30,10 @@ output like before
 
 """
 
-from base_assmbly import Assmbly
+from base_assembly import assembly
 
 
-class RotaryAxis(Assmbly):
+class RotaryAxis(assembly):
     """class for discription of the rotary axis
 
     This class is base class for all the rotary axis
