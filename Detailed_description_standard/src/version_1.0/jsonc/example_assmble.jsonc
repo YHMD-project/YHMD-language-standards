@@ -1,10 +1,11 @@
 {
   "version": "0.1",
-  // brief 中包含对该节点的简单描述
-  "brief": "轴系装配线样例",
 
   // name 中包含对该节点的名称描述
   "name": "rotary axis system",
+
+  // brief 中包含对该节点的简单描述
+  "brief": "轴系装配线样例",
 
   // type 中包含对该节点的类型描述
   "type": "rotary_axis",
