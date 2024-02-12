@@ -1,0 +1,25 @@
+{
+  "version": "0.1",
+  "name": "cylinde",
+  "brief": "圆柱体",
+  "type": "cylinde",
+  "dimension": ["base", "diameter", "length"],
+  "port": [
+    {
+      "name": "leftPort",
+      "linkType": "_left"
+    },
+    {
+      "name": "rightPort",
+      "linkType": "_right"
+    },
+    {
+      "name": "aroundPort",
+      "linkType": "_around"
+    },
+    {
+      "name": "cylindricalBus",
+      "linkType": "_bus"
+    }
+  ]
+}

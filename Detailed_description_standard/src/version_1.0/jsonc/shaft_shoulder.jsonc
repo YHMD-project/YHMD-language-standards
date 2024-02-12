@@ -1,21 +1,33 @@
 {
   "version": "0.1",
-  "brief": "构件样例",
-  "type": "shaft_shoulder",
+  //version 是该描述标准的版本，在尝试编写阶段为 0 字头标准
+
   "name": "shoulder_2",
+  //name 是该节点的名称,不含空格，采用蛇形命名法
+
+  "brief": "构件样例",
+  //brief 是该节点的简单描述
+
+  "type": "shaft_shoulder",
+  //type 是该节点的类型描述
+
   "property": {
     "materials": "unknown",
     "weight": "unknown",
     "process": "unknown"
   },
+  // property 是该节点实体相关制造属性的描述，如材料、重量、加工方式等
+
   "typeOfFatherAssembly": "rotary_axis",
-  // dimension 中包含对该节点的尺寸描述
+  // typeOfFatherAssembly 是该节点的父节点的类型描述
+
   "dimension": {
     "base": "cylinde",
     "diameter": 20,
     "length": 30
   },
-  // port 其他节点可以以此节点的端口为连接位置
+  // dimension 中包含对该节点的尺寸描述
+
   "port": [
     {
       "name": "leftPort",
@@ -34,6 +46,8 @@
       "linkType": "_bus"
     }
   ],
+  // port 其他节点可以以此节点的端口为连接位置
+
   "childassembly": {
     "axis": {
       "name": "axis_of_shoulder",

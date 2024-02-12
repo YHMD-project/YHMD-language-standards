@@ -1,0 +1,48 @@
+{
+  "version": "0.1",
+  //version 是该描述标准的版本，在尝试编写阶段为 0 字头标准
+
+  "name": "rotary_axis_example",
+  //name 是该节点的名称,不含空格，采用蛇形命名法
+
+  "brief": "轴系装配线样例",
+  //brief 是该节点的简单描述
+
+  "type": "rotary_axis",
+  //type 是该节点的类型描述
+
+  "dimension": {
+    // dimension 的值是一个字典，其中包含对该节点的尺寸描述,
+    "diameter": 20
+    // diameter 描述该节点的装配直径，单位为毫米
+    // 当该键值对不存在或值为0时为基装配线，否则为子装配线
+    // 当该节点为基装配线时，其子节点只能为与父节点固连的轴肩，
+    // 当该节点为子装配线时，其子节点的链接直径必定与该值相同
+  },
+
+  "childComponent": [
+    // childComponent 的值是一个列表，其中包含对该节点的子节点描述
+    {
+      "linkWithFa": "_fixed",
+      // linkWithFa 描述该节点与父节点的连接方式与相关参数，
+      // 当参数重要时，其值为字典，否则为字符串，只表示链接关系，默认装配参数为 0
+      "component": {
+        // 如果值为字典，则该字典中的键值对为子节点的描述
+        "name": "shaft_shoulder_1"
+      }
+    },
+    {
+      "linkWithFa": "_fixed",
+      // 同上，每个节点都至少有一个 linkWithFa
+      "linkwithBr": [
+        // linkwithBr 的值是一个列表，依次表示与兄弟节点的关系，
+        {
+          "brName": "shaft_shoulder_1",
+          "brLink": ["_right", "_fixed"]
+        }
+      ],
+      "component": "shoulder_2.jsonc"
+      // 如果值为字符串，则该字符串为子节点的文件路径
+    }
+  ]
+}
