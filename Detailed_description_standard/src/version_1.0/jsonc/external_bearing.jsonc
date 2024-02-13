@@ -7,7 +7,7 @@
     //一个可以查询轴承国标的网址：https://www.mechtool.cn/bearing/index.html
 
     "type": "extenal_bearing",
-    //该节点类型为轴承内圈
+    //该节点类型为轴承外圈
   
     "property": {
       "materials": "unknown",
