@@ -1,61 +1,61 @@
 {
-    "version": "0.1",
-  
-    "name": "轴套",
-  
-    "brief": "构件样例",
-  
-    "type": "shaft_sleeve",
-    //该节点类型为轴套
-  
-    "property": {
-      "materials": "unknown",
-      "weight": "unknown",
-      "process": "unknown"
+  "version": "0.1",
+
+  "name": "轴套",
+
+  "brief": "构件样例",
+
+  "type": "shaft_sleeve",
+  //该节点类型为轴套
+
+  "property": {
+    "materials": "unknown",
+    "weight": "unknown",
+    "process": "unknown"
+  },
+  //相关制造属性默认值为unknown
+
+  "typeOfFatherAssembly": "rotary_axis",
+  //与父结点装配线类型为回转轴系
+
+  "dimension": {
+    "base": "annular_column",
+    //派生自圆柱环
+    "inner_diameter": 0,
+    "external_diameter": 0,
+    "length": 0
+    //圆柱环相关尺寸
+  },
+
+  "port": [
+    {
+      "name": "leftPort",
+      "linkType": "_left"
     },
-    //相关制造属性默认值为unknown
-  
-    "typeOfFatherAssembly": "rotary_axis",
-    //与父结点装配线类型为回转轴系
-  
-    "dimension": {
-      "base": "annular_column",
-      //派生自圆柱环
-      "inner_diameter": 0,
-      "external_diameter": 0,
-      "length": 0
-      //圆柱环相关尺寸
+    {
+      "name": "rightPort",
+      "linkType": "_right"
     },
-  
-    "port": [
-      {
-        "name": "leftPort",
-        "linkType": "_left"
-      },
-      {
-        "name": "rightPort",
-        "linkType": "_right"
-      },
-      {
-        "name": "inner_aroundPort",
-        "linkType": "_inner__around"
-      },
-      {
-        "name": "external_aroundPort",
-        "linkType": "_external__around"
-      },
-      {
-        "name": "cylindricalBus",
-        "linkType": "_bus"
-      }
-    ],
-    //派生自圆柱环的端口
-  
-    "childassembly": [
-      {
-        "name": "axis_of_sleeve",
-        "type": "rotary_axis",
-        "childComent": {}
-      }
-    ]
-  }
+    {
+      "name": "inner_aroundPort",
+      "linkType": "_inner__around"
+    },
+    {
+      "name": "external_aroundPort",
+      "linkType": "_external__around"
+    },
+    {
+      "name": "cylindricalBus",
+      "linkType": "_bus"
+    }
+  ],
+  //派生自圆柱环的端口
+
+  "childassembly": [
+    {
+      "name": "axis_of_sleeve",
+      "type": "rotary_axis",
+      "childComent": {}
+    }
+  ]
+}

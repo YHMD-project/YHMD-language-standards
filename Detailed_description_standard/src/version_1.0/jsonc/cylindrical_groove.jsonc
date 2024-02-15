@@ -1,56 +1,56 @@
 {
-    "version": "0.1",
-  
-    "name": "圆柱槽",
-  
-    "brief": "构件样例",
-  
-    "type": "cylindrical_groove",
-    //该节点类型为圆柱槽
-  
-    "property": {
-      "process": "unknown"
+  "version": "0.1",
+
+  "name": "圆柱槽",
+
+  "brief": "构件样例",
+
+  "type": "cylindrical_groove",
+  //该节点类型为圆柱槽
+
+  "property": {
+    "process": "unknown"
+  },
+  //相关制造属性默认值为unknown
+
+  "typeOfFatherAssembly": "rotary_axis",
+  //与父结点装配线类型为回转轴系
+
+  "dimension": {
+    "base": "annular_column",
+    //派生自圆柱环
+    "depth": 0,
+    "length": 0
+    //圆柱槽的外直径必定与其配合物外径相等，因此只需确定其深度即可
+  },
+
+  "port": [
+    {
+      "name": "leftPort",
+      "linkType": "_left"
     },
-    //相关制造属性默认值为unknown
-  
-    "typeOfFatherAssembly": "rotary_axis",
-    //与父结点装配线类型为回转轴系
-  
-    "dimension": {
-      "base": "annular_column",
-      //派生自圆柱环
-      "depth": 0,
-      "length": 0
-      //圆柱槽的外直径必定与其配合物外径相等，因此只需确定其深度即可
+    {
+      "name": "rightPort",
+      "linkType": "_right"
     },
-  
-    "port": [
-      {
-        "name": "leftPort",
-        "linkType": "_left"
-      },
-      {
-        "name": "rightPort",
-        "linkType": "_right"
-      },
-      {
-        "name": "cuttingPort",
-        "linkType": "_cutting"
-      },
-      //新定义的端口类型，其作用为切割实体，使用方法是将槽的外表面与被切割圆柱或圆柱环的外表面配合
-      {
-        "name": "containPort",
-        "linkType": "_contain"
-      }
-      //新定义的端口类型，其作用为表示槽内放置某物
-    ],
-    //派生自圆柱环的端口
-  
-    "childassembly": [
-      {
-        "name": "axis_of_groove",
-        "type": "rotary_axis",
-        "childComent": {}
-      }
-    ]
-  }
+    {
+      "name": "cuttingPort",
+      "linkType": "_cutting"
+    },
+    //新定义的端口类型，其作用为切割实体，使用方法是将槽的外表面与被切割圆柱或圆柱环的外表面配合
+    {
+      "name": "containPort",
+      "linkType": "_contain"
+    }
+    //新定义的端口类型，其作用为表示槽内放置某物
+  ],
+  //派生自圆柱环的端口
+
+  "childassembly": [
+    {
+      "name": "axis_of_groove",
+      "type": "rotary_axis",
+      "childComent": {}
+    }
+  ]
+}

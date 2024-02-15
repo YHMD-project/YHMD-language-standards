@@ -1,58 +1,55 @@
 {
-    "version": "0.1",
-  
-    "name": "键槽",
-  
-    "brief": "构件样例",
-  
-    "type": "keyway",
-    //该节点类型为键槽
-  
-    "property": {
-      "process": "unknown"
+  "version": "0.1",
+
+  "name": "键槽",
+
+  "brief": "构件样例",
+
+  "type": "keyway",
+  //该节点类型为键槽
+
+  "property": {
+    "process": "unknown"
+  },
+  //相关制造属性默认值为unknown
+
+  "typeOfFatherAssembly": "rotary_axis",
+  //与父结点装配线类型为回转轴系
+
+  "dimension": {
+    //键槽无派生类
+    "baseSize": 0,
+    //键槽的基本尺寸，需满足国家标准，为枚举值，可选值有：
+    //2、3、4、5、6、8、10、12、14、16、18、20、22、25、28、32、36、40、45、50、56、63、70、80、90、100
+    //基本尺寸对应的具体宽度与高度b*h的值可参考国家标准，可参考的网址为：https://xifengboke.com/post/514.html#:~:text=%E5%B9%B3%E9%94%AE%E5%92%8C%E9%94%AE%E6%A7%BD%E7%9A%84%E6%A0%87%E5%87%86%E5%B0%BA%E5%AF%B8%E8%A7%84%E6%A0%BC%E8%A1%A8%20%28GB%2FT%E2%80%821095-1979%29...,%E5%9C%A8%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%BB%8F%E5%B8%B8%E7%94%A8%E5%88%B0%E7%9A%84%E5%B0%B1%E6%98%AF%E9%94%AE%E6%A7%BD%E7%9A%84%E7%BB%98%E5%88%B6%E5%92%8C%E6%A0%87%E6%B3%A8%EF%BC%8C%E9%82%A3%E4%B9%88%E5%9B%BD%E5%AE%B6%E6%A0%87%E5%87%86%E9%94%AE%E6%A7%BD%E5%B0%BA%E5%AF%B8%E5%88%86%E4%BA%AB%E7%BB%99%E5%A4%A7%E5%AE%B6%EF%BC%8C%E8%AE%B0%E5%BE%97%E6%94%B6%E8%97%8F%E5%A5%A5%EF%BC%8C%E6%96%B9%E4%BE%BF%E5%90%8E%E7%BB%AD%E6%9F%A5%E9%98%85%E3%80%82%20%E5%B9%B3%E9%94%AE%E5%92%8C%E9%94%AE%E6%A7%BD%E7%9A%84%E6%A0%87%E5%87%86%E5%B0%BA%E5%AF%B8%E8%A7%84%E6%A0%BC%E8%A1%A8%20%28GB%2FT%E2%80%821095-1979%29
+    "keywayType": "flatKey",
+    //对应键的类型，为枚举值，可选值为平键(flatKey)和楔键(wedgeKey)
+    //需要注意的是，楔键的底部有固定斜度1:100，平键则没有
+    "length": 0
+    //自定义的键槽长度
+  },
+
+  "port": [
+    {
+      "name": "leftPort",
+      "linkType": "_left"
     },
-    //相关制造属性默认值为unknown
-  
-    "typeOfFatherAssembly": "rotary_axis",
-    //与父结点装配线类型为回转轴系
-  
-    "dimension": {
-      //键槽无派生类
-      "baseSize": 0,
-      //键槽的基本尺寸，需满足国家标准，为枚举值，可选值有：
-      //2、3、4、5、6、8、10、12、14、16、18、20、22、25、28、32、36、40、45、50、56、63、70、80、90、100
-      //基本尺寸对应的具体宽度与高度b*h的值可参考国家标准，可参考的网址为：https://xifengboke.com/post/514.html#:~:text=%E5%B9%B3%E9%94%AE%E5%92%8C%E9%94%AE%E6%A7%BD%E7%9A%84%E6%A0%87%E5%87%86%E5%B0%BA%E5%AF%B8%E8%A7%84%E6%A0%BC%E8%A1%A8%20%28GB%2FT%E2%80%821095-1979%29...,%E5%9C%A8%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%BB%8F%E5%B8%B8%E7%94%A8%E5%88%B0%E7%9A%84%E5%B0%B1%E6%98%AF%E9%94%AE%E6%A7%BD%E7%9A%84%E7%BB%98%E5%88%B6%E5%92%8C%E6%A0%87%E6%B3%A8%EF%BC%8C%E9%82%A3%E4%B9%88%E5%9B%BD%E5%AE%B6%E6%A0%87%E5%87%86%E9%94%AE%E6%A7%BD%E5%B0%BA%E5%AF%B8%E5%88%86%E4%BA%AB%E7%BB%99%E5%A4%A7%E5%AE%B6%EF%BC%8C%E8%AE%B0%E5%BE%97%E6%94%B6%E8%97%8F%E5%A5%A5%EF%BC%8C%E6%96%B9%E4%BE%BF%E5%90%8E%E7%BB%AD%E6%9F%A5%E9%98%85%E3%80%82%20%E5%B9%B3%E9%94%AE%E5%92%8C%E9%94%AE%E6%A7%BD%E7%9A%84%E6%A0%87%E5%87%86%E5%B0%BA%E5%AF%B8%E8%A7%84%E6%A0%BC%E8%A1%A8%20%28GB%2FT%E2%80%821095-1979%29
-      "keywayType": "flatKey",
-      //对应键的类型，为枚举值，可选值为平键(flatKey)和楔键(wedgeKey)
-      //需要注意的是，楔键的底部有固定斜度1:100，平键则没有
-      "length": 0
-      //自定义的键槽长度
+    {
+      "name": "rightPort",
+      "linkType": "_right"
     },
-  
-    "port": [
-      {
-        "name": "leftPort",
-        "linkType": "_left"
-      },
-      {
-        "name": "rightPort",
-        "linkType": "_right"
-      },
-      {
-        "name": "cuttingPort",
-        "linkType": "_cutting"
-      },
-      //新定义的端口类型，其作用为切割实体，使用方法是将键槽的外表面与被切割圆柱或圆柱环的母线配合
-      {
-        "name": "containPort",
-        "linkType": "_contain"
-      }
-      //新定义的端口类型，其作用为表示槽内放置某物
-    ],
-    //派生自圆柱环的端口
-  
-    "childassembly": [
-      {
-      }
-    ]
-  }
+    {
+      "name": "cuttingPort",
+      "linkType": "_cutting"
+    },
+    //新定义的端口类型，其作用为切割实体，使用方法是将键槽的外表面与被切割圆柱或圆柱环的母线配合
+    {
+      "name": "containPort",
+      "linkType": "_contain"
+    }
+    //新定义的端口类型，其作用为表示槽内放置某物
+  ],
+  //派生自圆柱环的端口
+
+  "childassembly": [{}]
+}
