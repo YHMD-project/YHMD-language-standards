@@ -29,7 +29,7 @@ author: yixing
     * `linkWithFa` 该节点与父节点的链接方式，只有**枚举值**，枚举值第一个字符为下划线
       * `_fixed` 固定，与父节点固连为一个整体
       * $\dots$
-    * `linkWithBr` 该节点与兄节点的链接方式，只有**枚举值**，枚举值第一个字符为下划线
+    * `linkWithBr` 该节点与兄节点的链接方式，值是一个字典，字典中描述了兄节点名称及链接方式，链接方式只有**枚举值**，枚举值第一个字符为下划线。
       * `_right` 在兄节点右侧
       * `_left` 在兄节点左侧
       * `_fixed` 与兄节点固连
@@ -41,4 +41,4 @@ author: yixing
 * 轴系
   * 回转轴系 rotary_axis
 
-@import "rotary_axis.md"
+@import "jsonc\rotary_axis.md"
