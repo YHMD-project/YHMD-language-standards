@@ -39,3 +39,4 @@ author: yixing
 * "childassembly" 子装配线节点，值是个列表，列表中每个元素为子装配线节点
 
 @import "shaft_shoulder.md"
+@import "bearing.md"
