@@ -50,7 +50,7 @@
     },
     {
       "name": "external_aroundPort",
-      "linkType": "_external__around"
+      "linkType": "_external_around"
     },
     //轴承外圈的内部不应该有包裹配合端口
     {
