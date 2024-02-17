@@ -38,5 +38,9 @@ author: yixing
 * "port" 构件节点端口，值是个列表，列表的每个值是个字典，字典中值只有枚举值，描述弟节点可以的链接方式，枚举值与 "linkWithBr" 相同
 * "childassembly" 子装配线节点，值是个列表，列表中每个元素为子装配线节点
 
-@import "shaft_shoulder.md"
-@import "bearing.md"
+@import "jsonc\shaft_shoulder.md"
+@import "jsonc\bearing.md"
+@import "jsonc\cylindrical_groove.md"
+@import "jsonc\keyway.md"
+@import "jsonc\shaft_shoulder.md"
+@import "jsonc\shaft_sleeve.md"

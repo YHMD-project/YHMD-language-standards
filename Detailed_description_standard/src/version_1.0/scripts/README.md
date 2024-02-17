@@ -1,8 +1,5 @@
 # readme
 
-* assembly
-  * basd_assembly 装配线相关节点继承自装配线基类
-  * rotary_axis
-* component
-  * base_component 构件相关节点继承自构件基类
-  * shaft_shoulder
+这个文件夹中包含详细标准生成器，可以将python类生成对应的json文件。
+
+运行base_component.py可以生成base_component.json文件。

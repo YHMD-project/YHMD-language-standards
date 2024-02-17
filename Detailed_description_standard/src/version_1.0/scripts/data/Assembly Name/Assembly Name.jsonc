@@ -1,0 +1,11 @@
+{
+    "name": "Assembly Name",
+    "brief": "Assembly Description",
+    "child_component": [
+        {
+            "link_with_fa": "link_with_fa",
+            "link_with_br": "link_with_br",
+            "component": "data\\Assembly Name\\Assembly Name 1.jsonc"
+        }
+    ]
+}

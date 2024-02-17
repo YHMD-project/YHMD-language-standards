@@ -1,0 +1,15 @@
+{
+    "name": "Assembly Name",
+    "brief": "Assembly Description",
+    "child_component": [
+        {
+            "link_with_fa": "link_with_fa",
+            "link_with_br": "link_with_br",
+            "component": {
+                "name": "Assembly Name 1",
+                "brief": "Assembly Description 1",
+                "child_component": []
+            }
+        }
+    ]
+}
