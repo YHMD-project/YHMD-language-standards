@@ -38,11 +38,11 @@
     },
     {
       "name": "inner_aroundPort",
-      "linkType": "_inner__around"
+      "linkType": "_inner_around"
     },
     {
       "name": "external_aroundPort",
-      "linkType": "_external__around"
+      "linkType": "_external_around"
     },
     {
       "name": "inner_cylindricalBus",
