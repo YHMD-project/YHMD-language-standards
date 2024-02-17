@@ -19,7 +19,7 @@ class Component(object):
 
       init: This is the constructor of the class,
       output_to_json: Output recursively as a jsonc file.
-      output_to_josns: Output recursively for each node as a jsonc file.
+      output_to_jsons: Output recursively for each node as a jsonc file.
       add_node: Add a node to the component.
     """
 
@@ -63,7 +63,7 @@ class Component(object):
           None.
         """
 
-    def output_to_josns(self, path: str) -> None:
+    def output_to_jsons(self, path: str) -> None:
         """
         Output recursively for each node as a jsonc file.
         输出为一个文件夹，将每个装配节点和构件节点分别输出为文件
@@ -102,7 +102,7 @@ class ShaftShoulder(Component):
     Functions:
       init: This is the constructor of the class,
       output_to_json: Output recursively as a jsonc file.
-      output_to_josns: Output recursively for each node as a jsonc file.
+      output_to_jsons: Output recursively for each node as a jsonc file.
       add_node: Add a node to the component.
     """
 
@@ -145,7 +145,7 @@ class assembly(object):
 
       init: This is the constructor of the class,
       output_to_json: Output recursively as a jsonc file.输出为一个完整文档
-      output_to_josns: Output recursively for each node as a jsonc file.
+      output_to_jsons: Output recursively for each node as a jsonc file.
                        输出为一个文件夹，将每个装配节点和构件节点分别输出为文件
       add_node: Add a node to the assembly.添加一个节点到装配线
     """
@@ -205,7 +205,7 @@ class assembly(object):
           None.
         """
 
-    def output_to_josns(self, path: str) -> None:
+    def output_to_jsons(self, path: str) -> None:
         """
         Output recursively for each node as a jsonc file.
         输出为一个文件夹，将每个装配节点和构件节点分别输出为文件
@@ -243,7 +243,7 @@ class RotaryAxis(assembly):
       init: This is the constructor of the class,
       link_to_json: Link the assembly to the json file.
       output_to_json: Output recursively as a jsonc file.输出为一个完整文档
-      output_to_josns: Output recursively for each node as a jsonc file.
+      output_to_jsons: Output recursively for each node as a jsonc file.
                        输出为一个文件夹，将每个装配节点和构件节点分别输出为文件
       add_node: Add a node to the assembly.添加一个节点到装配线
     """
