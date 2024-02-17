@@ -45,8 +45,12 @@
       "linkType": "_external__around"
     },
     {
-      "name": "cylindricalBus",
-      "linkType": "_bus"
+      "name": "inner_cylindricalBus",
+      "linkType": "_inner_bus"
+    },
+    {
+      "name": "external_cylindricalBus",
+      "linkType": "_external_bus"
     }
   ],
   //派生自圆柱环的端口
