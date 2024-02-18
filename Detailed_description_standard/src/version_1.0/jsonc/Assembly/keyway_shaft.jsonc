@@ -1,0 +1,21 @@
+{
+   "version": "1.0",
+   "name": "keyway_shaft",
+   "brief": "键槽轴",
+   "type": "rotary_axis",
+   "dimension": {
+      "diameter": 16
+   },
+   "childComponent": [
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_left"
+         ],
+         "component": {
+            "name": "shaft_shoulder"
+         }
+      },
+      {}
+   ]
+}
