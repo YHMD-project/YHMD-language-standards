@@ -68,7 +68,7 @@ class Assembly(BaseNode):
         Returns:
           dict of the assembly.
         """
-        self_dict = vars(self)
+        self_dict = vars(self).copy()
         for child, child_dict in zip(
             self.child_component, self_dict["child_component"]
         ):
@@ -104,7 +104,7 @@ class Assembly(BaseNode):
         folder_name = os.path.join(path, self.name)
         self_path = os.path.join(folder_name, self.name + ".jsonc")
         os.makedirs(folder_name, exist_ok=True)
-        self_dict = vars(self)
+        self_dict = vars(self).copy()
         for child, child_dict in zip(
             self.child_component, self_dict["child_component"]
         ):
