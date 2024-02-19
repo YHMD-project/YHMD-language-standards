@@ -16,6 +16,8 @@
             "name": "shaft_shoulder"
          }
       },
-      {}
+      {
+         "linkWithFa": "_inner_around",
+      }
    ]
 }
