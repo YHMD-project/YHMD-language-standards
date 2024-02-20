@@ -27,7 +27,7 @@
          "component": {
             "name": "shaft_shoulder"
          }
-      },
+      }, //增加一个轴肩
       {
          "linkWithFa": "_outer_around",
          "linkwithBr": [
@@ -39,6 +39,6 @@
          // 同上，每个节点都至少有一个 linkWithFa
          "component": "bearing_outer_ring.jsonc"
          // 如果值为字符串，则该字符串为子节点的文件路径
-      }
+      } //将轴承外圈与轴装配
    ]
 }

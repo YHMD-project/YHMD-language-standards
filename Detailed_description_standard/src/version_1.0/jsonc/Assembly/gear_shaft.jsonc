@@ -1,7 +1,7 @@
 {
    "version": "1.0",
-   "name": "keyway_shaft",
-   "brief": "键槽轴",
+   "name": "gear_shaft",
+   "brief": "齿轮轴",
    "type": "rotary_axis",
    "dimension": {
       "diameter": 16
@@ -15,7 +15,7 @@
          "component": {
             "name": "shaft_shoulder"
          }
-      }, //增加一个轴肩
+      }, //轴肩
       {
          "linkWithFa": [
             "fixed",
@@ -24,10 +24,10 @@
          "component": {
             "name": "rotary_axis"
          }
-      }, //再来一段轴
+      }, //阶梯
       {
          "linkWithFa": [
-            "fixed"
+            "_around"
          ],
          "linkWithBr": [
             {
@@ -36,16 +36,31 @@
                   "_bus",
                   "_fixed"
                ]
-            } //定义于轴肩母线
+            }
          ],
          "component": {
-            "name": "keyway",
+            "name": "gear",
             "dimension": {
-               "baseSize": 4,
-               "keywayType": "flatKey",
-               "length": 12
-            }
+               "module": 2,
+               "teethNumber": 20
+            } //以上参数随意为之,剩余参数自动跟随配合
          }
-      } //键槽定义
+      }, //齿轮
+      {
+         "linkWithFa": "_fixed",
+         "linkWithBr": [
+            {
+               "brName": "shaft_shoulder",
+               "brLink": [
+                  "_around",
+                  "_fixed"
+               ]
+            },
+            {
+               "brName": "gear",
+               "brLink": "_cutting" //cuttingport节点专为定义键槽
+            }
+         ]
+      } //键槽
    ]
 }

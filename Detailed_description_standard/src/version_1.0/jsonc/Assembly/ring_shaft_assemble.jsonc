@@ -40,6 +40,7 @@
             "name": "inner_bearing"
          }
          // "component":"PATH-TO-FILE/inner_bearing.jsonc"
-      }
+         //此为另一种选择
+      } //将轴承内圈与轴装配
    ]
 }
