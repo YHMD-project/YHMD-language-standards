@@ -1,0 +1,46 @@
+{
+   "version": "0.1",
+   //version 是该描述标准的版本，在尝试编写阶段为 0 字头标准
+   "name": "ring_shaft_assemble",
+   //name 是该节点的名称,不含空格，采用蛇形命名法
+   "brief": "轴承内圈与主轴装配",
+   //brief 是该节点的简单描述
+   "type": "rotary_axis",
+   //type 是该节点的类型描述
+   "dimension": {
+      "diameter": 15
+      // diameter 描述该节点的装配直径，单位为毫米
+      // 当该键值对不存在或值为0时为基装配线，否则为子装配线
+      // 当该节点为基装配线时，其子节点只能为与父节点固连的轴肩，
+      // 当该节点为子装配线时，其子节点的链接直径必定与该值相同
+   },
+   "childComponent": [
+      // childComponent 的值是一个列表，其中包含对该节点的子节点描述
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "shaft_shoulder"
+         }
+      },
+      {
+         "linkWithFa": "_inner_around",
+         // linkWithFa 描述该节点与父节点的连接方式与相关参数，
+         // 当参数重要时，其值为字典，否则为字符串，只表示链接关系，默认装配参数为 0
+         "linkwithBr": [
+            {
+               "brName": "shaft_shoulder",
+               "brLink": "_left"
+            }
+         ],
+         "component": {
+            // 如果值为字典，则该字典中的键值对为子节点的描述
+            "name": "inner_bearing"
+         }
+         // "component":"PATH-TO-FILE/inner_bearing.jsonc"
+         //此为另一种选择
+      } //将轴承内圈与轴装配
+   ]
+}

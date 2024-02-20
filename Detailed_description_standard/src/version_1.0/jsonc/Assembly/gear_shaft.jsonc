@@ -1,0 +1,66 @@
+{
+   "version": "1.0",
+   "name": "gear_shaft",
+   "brief": "齿轮轴",
+   "type": "rotary_axis",
+   "dimension": {
+      "diameter": 16
+   },
+   "childComponent": [
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "shaft_shoulder"
+         }
+      }, //轴肩
+      {
+         "linkWithFa": [
+            "fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "rotary_axis"
+         }
+      }, //阶梯
+      {
+         "linkWithFa": [
+            "_around"
+         ],
+         "linkWithBr": [
+            {
+               "brName": "shaft_shoulder",
+               "brLink": [
+                  "_bus",
+                  "_fixed"
+               ]
+            }
+         ],
+         "component": {
+            "name": "gear",
+            "dimension": {
+               "module": 2,
+               "teethNumber": 20
+            } //以上参数随意为之,剩余参数自动跟随配合
+         }
+      }, //齿轮
+      {
+         "linkWithFa": "_fixed",
+         "linkWithBr": [
+            {
+               "brName": "shaft_shoulder",
+               "brLink": [
+                  "_around",
+                  "_fixed"
+               ]
+            },
+            {
+               "brName": "gear",
+               "brLink": "_cutting" //cuttingport节点专为定义键槽
+            }
+         ]
+      } //键槽
+   ]
+}
