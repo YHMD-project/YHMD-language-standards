@@ -1,49 +1,53 @@
 {
    "version": "1.0",
-   "name": "gear_shaft",
+   "name": "gear_shaft_assemble",
    "brief": "齿轮轴",
-   "type": "rotary_axis",
+   "type": "gear_shaft",
    "dimension": {
-      "diameter": 16
+      "diameter": 20
    },
    "childComponent": [
+      {
+         "linkWithFa": [
+            "_fixed"
+         ],
+         "component": {
+            "name": "shaft_shoulder_1"
+         }
+      }, //轴肩
       {
          "linkWithFa": [
             "_fixed",
             "_right"
          ],
          "component": {
-            "name": "shaft_shoulder"
+            "name": "shaft_shoulder_2"
          }
       }, //轴肩
       {
          "linkWithFa": [
-            "fixed",
+            "_fixed",
             "_right"
          ],
          "component": {
-            "name": "rotary_axis"
+            "name": "shaft_shoulder_3"
          }
-      }, //阶梯
+      }, //轴肩
       {
          "linkWithFa": [
             "_around"
          ],
          "linkWithBr": [
             {
-               "brName": "shaft_shoulder",
+               "brName": "shaft_shoulder_2",
                "brLink": [
-                  "_bus",
+                  "_around",
                   "_fixed"
                ]
             }
          ],
          "component": {
-            "name": "gear",
-            "dimension": {
-               "module": 2,
-               "teethNumber": 20
-            } //以上参数随意为之,剩余参数自动跟随配合
+            "name": "gear"
          }
       }, //齿轮
       {
@@ -52,7 +56,7 @@
             {
                "brName": "shaft_shoulder",
                "brLink": [
-                  "_around",
+                  "_bus",
                   "_fixed"
                ]
             },

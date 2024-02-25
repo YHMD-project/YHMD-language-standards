@@ -1,0 +1,38 @@
+{
+  "name": "annular_column",
+  "brief": "圆环柱",
+  "type": "annular_column",
+  "dimension": {
+    "base": 12,
+    "inner_diameter": 35,
+    "external_diameter": 40,
+    "length": 60
+  },
+  "port": [
+    {
+      "name": "leftPort",
+      "linkType": "_left"
+    },
+    {
+      "name": "rightPort",
+      "linkType": "_right"
+    },
+    {
+      "name": "inner_aroundPort",
+      "linkType": "_inner_around"
+    },
+    {
+      "name": "external_aroundPort",
+      "linkType": "_external_around"
+    },
+    {
+      "name": "inner_cylindricalBus",
+      "linkType": "_inner_bus"
+    },
+    {
+      "name": "external_cylindricalBus",
+      "linkType": "_external_bus"
+    }
+  ],
+  "child_assembly": []
+}

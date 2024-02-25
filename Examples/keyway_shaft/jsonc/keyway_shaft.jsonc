@@ -1,10 +1,10 @@
 {
    "version": "1.0",
-   "name": "keyway_shaft",
+   "name": "keyway_shaft_assembly",
    "brief": "键槽轴",
-   "type": "rotary_axis",
+   "type": "keyway_shaft",
    "dimension": {
-      "diameter": 16
+      "diameter": 20
    },
    "childComponent": [
       {
@@ -13,18 +13,18 @@
             "_right"
          ],
          "component": {
-            "name": "shaft_shoulder"
+            "name": "shaft_shoulder_1"
          }
-      }, //增加一个轴肩
+      }, //一段轴
       {
          "linkWithFa": [
-            "fixed",
+            "_fixed",
             "_right"
          ],
          "component": {
-            "name": "rotary_axis"
+            "name": "shaft_shoulder_2"
          }
-      }, //再来一段轴
+      }, //增加一个轴肩
       {
          "linkWithFa": [
             "fixed"
@@ -39,12 +39,7 @@
             } //定义于轴肩母线
          ],
          "component": {
-            "name": "keyway",
-            "dimension": {
-               "baseSize": 4,
-               "keywayType": "flatKey",
-               "length": 12
-            }
+            "name": "keyway"
          }
       } //键槽定义
    ]

@@ -1,0 +1,70 @@
+{
+  "version": "0.1",
+
+  "name": "轴承内圈",
+
+  "brief": "该部分为轴承内圈的简要描述，需要注意的是轴承为标准件，尺寸应对应国标编号",
+  //一个可以查询轴承国标的网址：https://www.mechtool.cn/bearing/index.html
+
+  "type": "inner_bearing",
+  //该节点类型为轴承内圈
+
+  "property": {
+    "materials": "unknown",
+    "weight": "unknown",
+    "process": "unknown"
+  },
+  //相关制造属性默认值为unknown
+
+  "typeOfFatherAssembly": "rotary_axis",
+  //与父结点装配线类型为回转轴系
+
+  "dimension": {
+    "base": "annular_column",
+    //派生自圆柱环
+    //轴承为标准件，尺寸应按照国标编号，下面以NU202号轴承为例
+    "inner_diameter": 15,
+    "external_diameter": 35,
+    "length": 11,
+    //圆柱环相关尺寸
+    "bearing_type": "cylindricalRollerBearings",
+    //轴承类型：圆柱滚子轴承
+    "bearing_number": "NU202"
+    //轴承编号
+    //一个可以查询轴承国标的网址：https://www.mechtool.cn/bearing/index.html
+  },
+
+  "port": [
+    {
+      "name": "withExternalRing",
+      "linkType": "_withExternalRing"
+    },
+    //轴承内圈与轴承外圈的特殊配合端口
+    {
+      "name": "leftPort",
+      "linkType": "_left"
+    },
+    {
+      "name": "rightPort",
+      "linkType": "_right"
+    },
+    {
+      "name": "inner_aroundPort",
+      "linkType": "_inner_around"
+    },
+    //轴承内圈的外部不应该有环绕配合端口
+    {
+      "name": "cylindricalBus",
+      "linkType": "_bus"
+    }
+  ],
+  //派生自圆柱环的端口
+
+  "childassembly": [
+    {
+      "name": "axis_of_inner_bearing",
+      "type": "rotary_axis",
+      "childComent": {}
+    }
+  ]
+}
