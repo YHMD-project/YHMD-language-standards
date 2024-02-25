@@ -1,0 +1,19 @@
+{
+    "name": "ex1_rotary_axis",
+    "brief": "just a axis",
+    "child_component": [
+        {
+            "link_with_fa": "_fixed",
+            "link_with_br": "null",
+            "component": "F:\\yixing_sub\\doing\\code\\YHMD-project\\YHMD-language-standards\\Examples\\example1\\jsonc\\ex1_rotary_axis\\ex1_shoulder_1.jsonc"
+        },
+        {
+            "link_with_fa": "_fixed",
+            "link_with_br": [
+                "_left",
+                "ex1_shoulder_1"
+            ],
+            "component": "F:\\yixing_sub\\doing\\code\\YHMD-project\\YHMD-language-standards\\Examples\\example1\\jsonc\\ex1_rotary_axis\\ex1_shoulder_2.jsonc"
+        }
+    ]
+}

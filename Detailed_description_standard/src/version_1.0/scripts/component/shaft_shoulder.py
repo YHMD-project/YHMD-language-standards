@@ -47,7 +47,7 @@ class ShaftShoulder(Component):
     Functions:
       init: This is the constructor of the class,
       output_to_json: Output recursively as a jsonc file.
-      output_to_josns: Output recursively for each node as a jsonc file.
+      output_to_jsons: Output recursively for each node as a jsonc file.
       add_node: Add a node to the component.
     """
 

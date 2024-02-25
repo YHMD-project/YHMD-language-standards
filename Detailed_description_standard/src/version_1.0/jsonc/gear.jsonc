@@ -1,0 +1,81 @@
+{
+    "version": "0.1",
+  
+    "name": "齿轮",
+  
+    "brief": "构件样例",
+  
+    "type": "gear",
+    //该节点类型为齿轮
+  
+    "property": {
+      "materials": "unknown",
+      "weight": "unknown",
+      "process": "unknown"
+    },
+    //相关制造属性默认值为unknown
+  
+    "typeOfFatherAssembly": "rotary_axis",
+    //与父结点装配线类型为回转轴系
+  
+    "dimension": {
+      "base": "annular_column",
+      //派生自圆柱环
+      //齿轮相关尺寸参数：模数、齿数、长度。
+      //通过模数与齿数可推算出标准齿轮的其他基本参数
+      //另外，有齿顶高系数ha*和顶隙系数c*，通常正常齿：ha* =1； C*=0.25 短齿：ha* =0.8； C*=0.3
+      //根据以上参数则可推算出标准齿轮的全部尺寸参数
+      "module": 12,
+      //模数
+      //标准齿轮的模数是有常用值规定的，通常可选的值有1、1.25、1.5、2、2.5、3、4、5、6、8、10、12、14、16、20、25、32、40、50等
+      //更详细的标准可以参考GB/T 1357-2008（https://www.doc88.com/p-9748234749294.html）
+      "z": 18,
+      //齿数
+      //通常为避免齿轮出现根切等，齿数应选17~30以内
+      "length": 30,
+      //长度
+      "inner_diameter": 60
+      //内孔直径
+    },
+  
+    "port": [
+      {
+        "name": "meshingPort",
+        "linkType": "_meshing"
+      },
+      //齿轮的啮合端口
+      {
+        "name": "leftPort",
+        "linkType": "_left"
+      },
+      {
+        "name": "rightPort",
+        "linkType": "_right"
+      },
+      {
+        "name": "inner_aroundPort",
+        "linkType": "_inner_around"
+      },
+      {
+        "name": "external_aroundPort",
+        "linkType": "_external_around"
+      },
+      {
+        "name": "inner_cylindricalBus",
+        "linkType": "_inner_bus"
+      },
+      {
+        "name": "external_cylindricalBus",
+        "linkType": "_external_bus"
+      }
+    ],
+    //派生自圆柱环的端口
+  
+    "childassembly": [
+      {
+        "name": "axis_of_gear",
+        "type": "rotary_axis",
+        "childComent": {}
+      }
+    ]
+  }

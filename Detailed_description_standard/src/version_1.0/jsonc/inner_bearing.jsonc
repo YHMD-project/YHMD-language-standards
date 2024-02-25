@@ -50,7 +50,7 @@
     },
     {
       "name": "inner_aroundPort",
-      "linkType": "_inner__around"
+      "linkType": "_inner_around"
     },
     //轴承内圈的外部不应该有环绕配合端口
     {

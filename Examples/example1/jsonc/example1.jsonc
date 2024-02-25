@@ -1,0 +1,46 @@
+{
+  "name": "ex1_rotary_axis",
+  "brief": "just a axis",
+  "child_component": [
+    {
+      "link_with_fa": "_fixed",
+      "link_with_br": "null",
+      "component": {
+        "name": "ex1_shoulder_",
+        "brief": "first shoulder",
+        "dimension": {},
+        "port": {},
+        "child_assembly": []
+      }
+    },
+    {
+      "link_with_fa": "_fixed",
+      "link_with_br": ["_left", "ex1_shoulder_1"],
+      "component": {
+        "name": "ex1_shoulder_2",
+        "brief": "second shoulder",
+        "dimension": {},
+        "port": {},
+        "child_assembly": [
+          {
+            "name": "ex1_sh2_external",
+            "brief": "Outer surface of shaft shoulder 2",
+            "child_component": [
+              {
+                "link_with_fa": "_contain",
+                "link_with_br": ["_left", "ex1_shoulder_1"],
+                "component": {
+                  "name": "groove",
+                  "brief": "tool withdrawal groove",
+                  "dimension": {},
+                  "port": {},
+                  "child_assembly": []
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

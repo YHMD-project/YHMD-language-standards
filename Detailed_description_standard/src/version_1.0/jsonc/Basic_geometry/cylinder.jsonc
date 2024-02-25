@@ -1,8 +1,8 @@
 {
   "version": "0.1",
-  "name": "cylinde",
+  "name": "cylinder",
   "brief": "圆柱体",
-  "type": "cylinde",
+  "type": "cylinder",
   "dimension": ["base", "diameter", "length"],
   "port": [
     {
