@@ -1,0 +1,52 @@
+{
+    "version": "0.1",
+  
+    "name": "螺纹",
+  
+    "brief": "构件样例",
+  
+    "type": "screw_thread",
+    //该节点类型为键槽
+  
+    "property": {
+      "process": "unknown"
+    },
+    //相关制造属性默认值为unknown
+  
+    "typeOfFatherAssembly": "rotary_axis",
+    //与父结点装配线类型为回转轴系
+  
+    "dimension": {
+      //螺纹无派生类
+      "baseSize": "M1",
+      "pitch": 0.25,
+      //螺纹的基本尺寸，公称尺寸baseSize和螺距pitch均需要满足国家要求，本例中以M1*0.25为例
+      //一个可参考的网址如下：https://zhuanlan.zhihu.com/p/67286907
+      //需要注意的是螺距可区分粗牙或细牙，同时字母M可区分牙形
+      "rotation": "RH",
+      //螺纹旋向，RH为右旋，LH为左旋
+      "line_number": 1,
+      //螺线数量
+      "length": 0
+      //自定义的螺纹长度
+    },
+  
+    "port": [
+      {
+        "name": "leftPort",
+        "linkType": "_left"
+      },
+      {
+        "name": "rightPort",
+        "linkType": "_right"
+      },
+      {
+        "name": "cuttingPort",
+        "linkType": "_cutting"
+      }
+      //新定义的端口类型，其作用为切割实体，使用方法是将螺纹与被切割圆柱或圆柱环的内或外母线配合
+    ],
+  
+    "childassembly": [{}]
+  }
+  
