@@ -1,0 +1,70 @@
+{
+   "version": "1.0",
+   "name": "gear_shaft_assemble",
+   "brief": "齿轮轴",
+   "type": "gear_shaft",
+   "dimension": {
+      "diameter": 20
+   },
+   "childComponent": [
+      {
+         "linkWithFa": [
+            "_fixed"
+         ],
+         "component": {
+            "name": "shaft_shoulder_1"
+         }
+      }, //轴肩
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "shaft_shoulder_2"
+         }
+      }, //轴肩
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "shaft_shoulder_3"
+         }
+      }, //轴肩
+      {
+         "linkWithFa": [
+            "_around"
+         ],
+         "linkWithBr": [
+            {
+               "brName": "shaft_shoulder_2",
+               "brLink": [
+                  "_around",
+                  "_fixed"
+               ]
+            }
+         ],
+         "component": {
+            "name": "gear"
+         }
+      }, //齿轮
+      {
+         "linkWithFa": "_fixed",
+         "linkWithBr": [
+            {
+               "brName": "shaft_shoulder",
+               "brLink": [
+                  "_bus",
+                  "_fixed"
+               ]
+            },
+            {
+               "brName": "gear",
+               "brLink": "_cutting" //cuttingport节点专为定义键槽
+            }
+         ]
+      } //键槽
+   ]
+}

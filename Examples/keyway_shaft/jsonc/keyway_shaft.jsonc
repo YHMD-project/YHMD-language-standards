@@ -1,0 +1,46 @@
+{
+   "version": "1.0",
+   "name": "keyway_shaft_assembly",
+   "brief": "键槽轴",
+   "type": "keyway_shaft",
+   "dimension": {
+      "diameter": 20
+   },
+   "childComponent": [
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "shaft_shoulder_1"
+         }
+      }, //一段轴
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "shaft_shoulder_2"
+         }
+      }, //增加一个轴肩
+      {
+         "linkWithFa": [
+            "fixed"
+         ],
+         "linkWithBr": [
+            {
+               "brName": "shaft_shoulder",
+               "brLink": [
+                  "_bus",
+                  "_fixed"
+               ]
+            } //定义于轴肩母线
+         ],
+         "component": {
+            "name": "keyway"
+         }
+      } //键槽定义
+   ]
+}
