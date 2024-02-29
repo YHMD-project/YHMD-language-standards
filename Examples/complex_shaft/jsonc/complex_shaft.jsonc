@@ -1,0 +1,105 @@
+{
+   "version": "0.1",
+   "name": "复杂轴",
+   "brief": "多构件组合复杂轴",
+   "type": "complex_shaft",
+   "dimension": {
+      "diameter": 15
+   },
+   "childComponent": [
+      {
+         "linkWithFa": "_fixed",
+         "name": "shoulder_1",
+         "component": "Examples/complex_shaft/jsonc/shaft_shoulder/shaft_shoulder.jsonc"
+      },
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "LinkwithBr": {
+            "brName": "shoulder_1",
+            "brLink": [
+               "_right",
+               "_fixed"
+            ]
+         },
+         "name": "shoulder_2",
+         "component": "Examples/complex_shaft/jsonc/shaft_shoulder/shaft_shoulder_2.jsonc"
+      },
+      {
+         "linkWithFa": "_fixed",
+         "LinkwithBr": {
+            "brName": "shoulder_2",
+            "brLink": [
+               "_right",
+               "_fixed"
+            ]
+         },
+         "name": "shoulder_3",
+         "component": "Examples/complex_shaft/jsonc/shaft_shoulder/shaft_shoulder_3.jsonc"
+      },
+      {
+         "linkWithFa": "_fixed",
+         "LinkwithBr": {
+            "brName": "shaft_shoulder_3",
+            "brLink": [
+               "_right",
+               "_fixed"
+            ]
+         },
+         "name": "shoulder_4",
+         "component": "Examples/complex_shaft/jsonc/shaft_shoulder/shaft_shoulder_4.jsonc"
+      },
+      {
+         "linkWithFa": "_around",
+         "name": "sleeve",
+         "component": "Examples/complex_shaft/jsonc/shaft_sleeve/shaft_sleeve.jsonc"
+      },
+      {
+         "linkWithFa": "_around",
+         "LinkwithBr": [
+            {
+               "brName": "shoulder_1",
+               "brLink": [
+                  "_right",
+                  "_around"
+               ]
+            },
+            {
+               "brName": "shoulder_2",
+               "brLink": "_left"
+            }
+         ],
+         "name": "bearing_1",
+         "component": "Examples/complex_shaft/jsonc/inner_bearing/inner_bearing_1.jsonc"
+      },
+      {
+         "linkWithFa": "_around",
+         "LinkwithBr": [
+            {
+               "brName": "shoulder_4",
+               "brLink": "_around"
+            },
+            {
+               "brName": "sleeve",
+               "brLink": "_right"
+            }
+         ],
+         "name": "bearing_2",
+         "component": "Examples/complex_shaft/jsonc/inner_bearing/inner_bearing_2.jsonc"
+      },
+      {
+         "linkWithFa": [
+            "_bus",
+            "_fixed"
+         ],
+         "LinkwithBr": {
+            "brName": "shoulder_3",
+            "brLink": "_bus"
+         },
+         "name": "keyway",
+         "component": "Examples/complex_shaft/jsonc/keyway/keyway.jsonc"
+      }
+   ]
+}
