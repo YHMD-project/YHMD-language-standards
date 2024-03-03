@@ -1,0 +1,9 @@
+
+func hfhkhd[12] [12,12]
+{
+    return 0;
+}
+
+\bearing_outer[]{}
+
+\rotary_axis[]{\rotary_axis[]{}}
