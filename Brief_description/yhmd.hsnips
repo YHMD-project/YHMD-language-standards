@@ -1,0 +1,31 @@
+global
+
+    //  vscode api
+
+    const vscode = require("vscode");
+    let editor=vscode.window.activeTextEditor
+    let document=editor.document
+
+    // get Actrive Text Editor
+
+    vscode.window.onDidChangeActiveTextEditor((e) => {
+            editor=vscode.window.activeTextEditor;
+            document=editor.document
+        });
+    
+    // show time in StatusBar
+
+        setInterval(function(){myTimer()},1000);
+        function myTimer(){
+            vscode.window.setStatusBarMessage(new Date().toLocaleTimeString());
+        }
+
+    
+endglobal
+// def
+
+priority 100
+context true
+snippet `aa` "圆柱槽" A
+``\\cylindrical_groove[depth = $1]{$0}``
+endsnippet
