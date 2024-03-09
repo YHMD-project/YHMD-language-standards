@@ -1,0 +1,64 @@
+{
+   "version": "1.0",
+   "name": "shaft_1",
+   "brief": "轴1",
+   "type": "shaft_1",
+   "dimension": {
+      "diameter": 35
+   },
+   "childComponent": [
+      {
+         "linkWithFa": [
+            "_fixed"
+         ],
+         "component": {
+            "name": "shaft_shoulder_1"
+         }
+      }, //轴肩
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "shaft_shoulder_2"
+         }
+      }, //轴肩
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "shaft_shoulder_3"
+         }
+      }, //轴肩
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "shaft_shoulder_4"
+         }
+      }, //轴肩
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "shaft_shoulder_5"
+         }
+      }, //轴肩
+      {
+         "linkWithFa": [
+            "_fixed",
+            "_right"
+         ],
+         "component": {
+            "name": "shaft_shoulder_6"
+         }
+      } //轴肩
+   ]
+}
